@@ -13,13 +13,13 @@ Based on the data, the biggest market opportunity is in Snacks, specifically tar
 B. Project Links
 
 Notebook (Google Colab):
-🔗 [Insert Colab Share Link Here — set to “Anyone with link can view”]
+🔗 (https://colab.research.google.com/drive/1DYCSMLE4tj4-gYhwqyFlCGtzX2Ymmhth#scrollTo=Wf5KrEb6vrkR)
 
 Interactive Dashboard (Tableau Public):
-🔗 [Insert Tableau Public Link Here — must be publicly accessible]
+🔗(https://public.tableau.com/views/Sugar_Trap_Market_Gap_Dashboard/HealthySnackingMarketGapAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) 
 
 Presentation Deck (PDF/PPT):
-🔗 [Insert Google Drive / OneDrive Link Here — set to “Anyone with link can view”]
+🔗 (https://drive.google.com/file/d/1C41jcAP0mKWZfxLt69WJRnV_ugftf-D2/view?usp=sharing)
 
 
 C. Technical Explanation
@@ -95,19 +95,19 @@ This clearly identified the High Protein + Low Sugar quadrant, representing the 
 4. Recommendation (Story 4)
 
 Based on the data, the biggest market opportunity is in Snacks, specifically targeting products with 16–20g of protein and less than 4g of sugar per 100g.
-
 Although Snacks account for over 5,000 products, only 6.8% meet high-protein and low-sugar criteria, indicating significant whitespace opportunity in this segment.
+
 
 5. Bonus Story – Hidden Gem (Ingredient Analysis)
 
 Products within the High Protein + Low Sugar cluster were filtered and analyzed using the ingredients_text column.
-
 Keyword frequency analysis revealed the top protein sources among successful products:
 Soy (21 occurrences)
 Whey (15 occurrences)
 Oat (5 occurrences)
 
 This insight provides actionable guidance for R&D teams when formulating competitive high-protein snack products.
+
 
 6. Candidate’s Choice – Opportunity Density Metric
 
