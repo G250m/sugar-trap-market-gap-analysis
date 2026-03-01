@@ -5,13 +5,11 @@ Project Type: Market Gap & Product Strategy Analysis
 Tools Used: Python (Pandas), Google Colab, Tableau Public
 
 A. Executive Summary
-
 This analysis examined 44,140 food products from the Open Food Facts dataset to identify underserved opportunities in the “Healthy Snacking” market. A Nutrient Matrix comparing sugar and protein content revealed a clear white-space opportunity in the Snacks category. Although Snacks account for over 5,000 products, only 6.8% meet high-protein (>10g) and low-sugar (<5g) criteria. Products in this quadrant cluster around 16–20g of protein and under 4g of sugar per 100g, indicating a strong formulation benchmark for new product development.
 
 Based on the data, the biggest market opportunity is in Snacks, specifically targeting products with 16–20g of protein and less than 4g of sugar per 100g.
 
 B. Project Links
-
 Notebook (Google Colab):
 🔗 (https://colab.research.google.com/drive/1DYCSMLE4tj4-gYhwqyFlCGtzX2Ymmhth#scrollTo=Wf5KrEb6vrkR)
 
@@ -23,10 +21,9 @@ Presentation Deck (PDF/PPT):
 
 
 C. Technical Explanation
+
 1. Data Ingestion & Cleaning (Story 1)
-
 The Open Food Facts dataset exceeds 3GB in raw size. To ensure efficiency and reproducibility, a manageable subset was processed using chunked loading in Google Colab.
-
 Cleaning Steps
 Selected only required columns:
 product_name
@@ -47,17 +44,12 @@ Filtered biologically impossible values:
 Nutritional values constrained between 0–100g per 100g
 
 These steps ensured that erroneous entries and invalid nutritional data did not skew the analysis.
-
 Deliverable: Cleaned Pandas DataFrame exported for visualization.
 
 2. Category Engineering (Story 2)
-
 The categories_tags column contains thousands of comma-separated product tags. To make the analysis business-readable:
-
 Parsed the first category tag per product.
-
 Applied keyword-based mapping rules.
-
 Assigned each product to a simplified Primary Category.
 
 High-level buckets created include:
@@ -77,7 +69,6 @@ This reduced categorical noise and enabled strategic category-level comparison.
 
 
 3. Nutrient Matrix Visualization (Story 3)
-
 A scatter plot was developed in Tableau Public with:
 X-axis: Sugar (g per 100g)
 Y-axis: Protein (g per 100g)
@@ -110,7 +101,6 @@ This insight provides actionable guidance for R&D teams when formulating competi
 
 
 6. Candidate’s Choice – Opportunity Density Metric
-
 An additional metric called Opportunity Density (%) was introduced.
 
 This metric calculates the percentage of products within each category that meet High Protein + Low Sugar criteria.
