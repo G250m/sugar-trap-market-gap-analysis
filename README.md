@@ -28,33 +28,22 @@ C. Technical Explanation
 The Open Food Facts dataset exceeds 3GB in raw size. To ensure efficiency and reproducibility, a manageable subset was processed using chunked loading in Google Colab.
 
 Cleaning Steps
-
 Selected only required columns:
-
 product_name
-
 categories_tags
-
 sugars_100g
-
 proteins_100g
-
 ingredients_text
 
 Converted nutritional columns to numeric using:
-
 pd.to_numeric(errors="coerce")
 
 Removed rows missing:
-
 product_name
-
 sugars_100g
-
 proteins_100g
 
 Filtered biologically impossible values:
-
 Nutritional values constrained between 0–100g per 100g
 
 These steps ensured that erroneous entries and invalid nutritional data did not skew the analysis.
@@ -72,50 +61,36 @@ Applied keyword-based mapping rules.
 Assigned each product to a simplified Primary Category.
 
 High-level buckets created include:
-
 Snacks
-
 Beverages
-
 Dairy
-
 Meat & Seafood
-
 Condiments & Sauces
-
 Desserts
-
 Frozen Foods
-
 Cereals & Breakfast
-
 Plant-Based Foods
-
 Prepared Meals
-
 Other
 
 This reduced categorical noise and enabled strategic category-level comparison.
 
+
 3. Nutrient Matrix Visualization (Story 3)
 
 A scatter plot was developed in Tableau Public with:
-
 X-axis: Sugar (g per 100g)
-
 Y-axis: Protein (g per 100g)
-
 Color: Primary Category
 
 Interactive filter: Primary Category
 
 Reference lines were added at:
-
 Protein = 10g
-
 Sugar = 5g
 
 This clearly identified the High Protein + Low Sugar quadrant, representing the strategic “Blue Ocean.”
+
 
 4. Recommendation (Story 4)
 
@@ -128,11 +103,8 @@ Although Snacks account for over 5,000 products, only 6.8% meet high-protein and
 Products within the High Protein + Low Sugar cluster were filtered and analyzed using the ingredients_text column.
 
 Keyword frequency analysis revealed the top protein sources among successful products:
-
 Soy (21 occurrences)
-
 Whey (15 occurrences)
-
 Oat (5 occurrences)
 
 This insight provides actionable guidance for R&D teams when formulating competitive high-protein snack products.
@@ -144,13 +116,9 @@ An additional metric called Opportunity Density (%) was introduced.
 This metric calculates the percentage of products within each category that meet High Protein + Low Sugar criteria.
 
 Why this adds value:
-
 Quantifies whitespace numerically
-
 Allows category comparison beyond visual inspection
-
 Supports strategic prioritization
-
 Strengthens the business case for category selection
 
 This enhances the dashboard by providing measurable market saturation insight.
@@ -177,17 +145,11 @@ Completeness
 ✔ Hidden Gem analysis completed
 
 Conclusion
-
 This project demonstrates the ability to:
-
 Process large-scale real-world datasets efficiently
-
 Clean and structure messy nutritional data
-
 Engineer business-level product categories
-
 Identify market whitespace using quantitative analysis
-
 Translate data findings into actionable product strategy
 
 The analysis provides a data-backed roadmap for launching a high-protein, low-sugar snack product in an underserved segment of the market.
